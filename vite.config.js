@@ -1,20 +1,8 @@
-import { resolve } from 'path'
-import { defineConfig } from 'vite'
-
-const root = resolve(__dirname, 'src')
-const outDir = resolve(__dirname, 'dist')
-
-export default defineConfig({
-    root,
-    publicDir: 'assets',
+// vite.config.js
+export default {
+    root: 'src',
     build: {
-        outDir,
-        emptyOutDir: true,
-        rollupOptions: {
-            input: {
-                main: resolve(root, 'index.html'),
-                about: resolve(root, 'about.html'),
-            }
-        }
-    }
-})
+        outDir: '../dist'
+    },
+    publicDir: 'assets'
+}
